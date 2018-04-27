@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+                <meta http-equiv="refresh" content="3; url=http://www.davidqiu.com/">
+                    <title>David Qiu's</title>
+                    <meta name="description" content="">
+                        <meta name="keywords" content="">
+                            <link href="" rel="stylesheet">
+    </head>
+    <body style="background-color: rgb(238, 238, 187); padding: 0; margin: 0;">
+        <div style="height: 40vh;">
+        </div>
+        <div id='countdown-wrap' style="text-align: center; padding: 5vh 0; margin: 0; background-color: rgba(0, 0, 0, 0.2); cursor: pointer;" onclick="document.location='http://www.davidqiu.com/'">
+            Redirecting to <b>David Qiu's</b> personal website in <span id="countdown"></span>...
+        </div>
+        <script type="text/javascript">
+            var countdown_time = 3; // sec
+            var countdown_func = function () {
+                document.getElementById('countdown').innerHTML = '' + '<b>' + countdown_time + '</b>' + ' ' + (countdown_time > 1 ? 'seconds' : 'second' );
+                if (countdown_time > 0) {
+                    countdown_time --;
+                    setTimeout(function () {
+                               countdown_func();
+                               }, 1000);
+                } else {
+                    document.getElementById('countdown-wrap').innerHTML = 'Click here to redirect to http://www.davidqiu.com/ manually.'
+                }
+            }
+        countdown_func();
+            </script>
+    </body>
+</html>
